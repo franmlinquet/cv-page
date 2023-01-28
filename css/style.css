@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Source Sans Pro',sans-serif;
+    background: rgba(0, 0, 0, .01);
+}
+
+.container {
+    width: 100%;
+}
+
+
+nav {
+    background: #fff;
+    color: #333;
+    box-shadow: 10px 0 100px rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.logo-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 1.5rem;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.logo-title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+    transition: color .3s;
+}
+
+.logo-title:hover {
+    color: #facf0f;
+}
+
+.main-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.main-menu li a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 1.4rem;
+    transition: color .3s;
+}
+
+.main-menu li a:hover {
+    /* background: rgba(0, 0, 0, .1); */
+    color: #facf0f;
+}
+
+.open-menu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.close-menu {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.social {
+    display: flex;
+    width: 5rem;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.social .i {
+    height: 5rem;
+    width: 5rem;
+    color: #333;
+    display: none;
+    cursor: pointer;
+}
+
+.social .i:hover {
+    background-color: rgba(0, 0, 0, .1);
+    
+}
+
+
+@media(max-width: 800px){
+    .main-menu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, .9);
+        transition: top .7s ease;
+        display: none;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .open-menu {
+        display: block;
+    }
+
+    .main-menu li a {
+        background: none;
+        font-size: 1.6rem;
+    }
+
+    .social .i {
+        display: inline-block;
+        padding: 12px;
+    }
+}
